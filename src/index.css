@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --cream: #f6efe8;
+  --panel: #efe4dc;
+  --warm-white: #fffaf4;
+  --earth: #a4136c;
+  --earth-light: #ba578a;
+  --terracotta: #a7440f;
+  --terracotta-soft: #d596ce;
+  --accent: #b6466f; /* new pink tone like dashboard */
+  --accent-soft: #e7b8c7;
+  --charcoal: #ef5bbb;
+  --muted: #b859a4c2;
+  --border: #c776f0;
+  --card-bg: #ffeff8;
+  --shadow: 0 10px 20px rgba(237, 165, 255, 0.06);
+  --shadow-hover: 0 10px 30px rgba(236, 194, 247, 0.979);
+}
+
+body {
+  background: var(--cream);
+  font-family: 'DM Sans', sans-serif;
+  color: var(--charcoal);
+  padding: 20px;
+}
+
+/* HEADER */
+.header {
+  background: var(--earth);
+  padding: 18px 32px;
+  border-radius: 16px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: rgb(23, 22, 22);
+  box-shadow: var(--shadow);
+}
+
+/* HERO → now like dashboard banner */
+.hero {
+  background: linear-gradient(135deg, #e7b8c7, #d9a6b6);
+  padding: 30px;
+  border-radius: 16px;
+  margin-bottom: 20px;
+  color: #781637;
+  box-shadow: var(--shadow);
+}
+
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 32px;
+}
+
+.hero p {
+  margin-top: 8px;
+  color: #781637;
+}
+
+/* CONTROLS (like slicer panel) */
+.controls {
+  background: var(--panel);
+  padding: 16px;
+  border-radius: 16px;
+  margin: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+/* INPUT */
+input {
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: white;
+  min-width: 220px;
+}
+
+/* BUTTONS (pill style like dashboard) */
+button {
+  padding: 8px 16px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  background: #e6e0dc;
+  color: var(--charcoal);
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+button:hover {
+  background: var(--accent);
+  color: white;
+  transform: translateY(-1px);
+}
+
+/* ACTIVE BUTTON (optional if you add class later) */
+button.active {
+  background: var(--accent);
+  color: white;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 10px 20px;
+}
+
+/* CARD (dashboard style) */
+.card {
+  background: var(--card-bg);
+  border-radius: 18px;
+  padding: 18px;
+  box-shadow: var(--shadow);
+  transition: all 0.25s ease;
+  border: 1px solid var(--border);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
+}
+
+/* CARD TITLE */
+.card h3 {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+/* CARD TEXT */
+.card p {
+  margin-bottom: 8px;
+  color: var(--muted);
+}
+
+/* REGISTER BUTTON INSIDE CARD */
+.card button {
+  margin-top: 10px;
+  background: var(--terracotta);
+  color: white;
+}
+
+.card button:hover {
+  background: var(--earth);
+}
+
+/* LOADING */
+p {
+  text-align: center;
+  padding: 20px;
+}
